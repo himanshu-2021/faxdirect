@@ -13,6 +13,7 @@
           <div class="account-col text-center">
              <img src="{{asset('admin/images/logo2.png')}}" alt="" class="img-thumbnail">
              <h4 class="h4-style">Log into your account</h4>
+             {{-- <h4 class="h4-style-eight">Himanshu Kushwaha</h4> --}}
              <form class="m-t" role="form" action="">
                 <div class="form-group row">
                    <input type="text" class="form-control" placeholder="Username" required="">
@@ -24,9 +25,7 @@
                 <div class="text-center">
                    <button type="submit" class="btn btn-primary btn-sm Login-btn">Login</button>
                 </div>
-                <a href="forgotpassword.php"><small class="small-style">Forgot password?</small></a>
-
-
+                <a href="{{'forgot-password'}}"><small class="small-style">Forgot password?</small></a>
                 <hr>
 
                 <p class=" text-center p-margin-bottom-0px"><small class="small-style">Or sign in with</small></p>
@@ -35,20 +34,11 @@
                       <i class="fa fa-facebook-square"></i>
                       <span>Facebook</span>
                    </a>
-
                    <a href="#" class="btn btn-sm  btn-bordered Goog-btn">
                       <i class="fa fa-google-plus-square"></i>
                       <span>Google</span>
                    </a>
                 </div>
-
-
-
-
-
-
-
-
                 <hr>
 
                 <p class=" text-center p-margin-bottom-0px"><small class="small-style">Do not have an account?</small></p>

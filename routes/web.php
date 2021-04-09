@@ -26,6 +26,8 @@ use App\Http\Controllers\UserController as User;
 //guest route
 Route::get('login',[User::class,'userLogin'])->name('user.login');
 Route::get('register',[User::class,'userRegister'])->name('user.register');
+Route::post('register-submit',[User::class,'userRegisterPost'])->name('user.register.post');
+
 
 Route::get('/',[Home::class,'index'])->name('dashboard');
 
