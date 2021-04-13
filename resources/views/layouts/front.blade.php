@@ -23,11 +23,10 @@
       </div>
       <!-- /PRELOADER -->
 
+      @include('common.footerscript')
+      @stack('scripts_start')
+
+      @stack('scripts_end')
+         <!--footrescript -->
    </body>
-
-   @include('common.footerscript')
-   @stack('scripts_start')
-
-   @stack('scripts_end')
-      <!--footrescript -->
 </html>

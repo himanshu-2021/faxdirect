@@ -13,6 +13,10 @@ use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
+    public function index(Request $request)
+    {
+        return view('admin_dashboard');
+    }
     public function userLogin(Request $request)
     {
         return view('admin.login');
@@ -26,7 +30,7 @@ class UserController extends Controller
         $validator = \Validator::make($request->all(), [
             'name'  => 'bail|required',
             'email'  => 'bail|required|unique:users|email',
-            'bussiness_name'  => 'bail|required',
+            'bussiness_name'  => 'bail|required|unique:users,subdomain',
             'password'  => 'bail|required | min:4| max:7',
             'confirm_password' => 'bail|required|same:password|min:4',
         ]);
@@ -35,7 +39,7 @@ class UserController extends Controller
         }
 
         $data = $request->all();
-        $date=date('d-m-Y');
+        $date=date('Y-m-d H:i:s');
         $v = array('name' => $data['name'], 'email' => $data['email'], 'bussiness_name' => $data['bussiness_name'], 'password' => Hash::make($data['password']), 'role' => 'admin','created_at'=>$date ,'updated_at'=>$date);
         if (!empty($data)) {
             try {
@@ -91,8 +95,13 @@ class UserController extends Controller
     }
     public function testCommand(Request $request)
     {
-         exec("mysqldump -u 'root' -p '' 'faxdirect_dummy' | mysql -u 'root' --password='' 'fax_nota_bene_wl03ur'");
+        // exec("mysqldump -u faxdirect_admin --password=faxdirect@321 faxdirectadmin | mysql -u faxdirect_admin -pfaxdirect@321 faxdirect");
 
-        dd('success');
+                try{
+                    $d= DB::statement("CREATE DATABASE testing_database");
+                }catch(Exception $e){
+                    dd($e);
+                }
+        dd('hello');
     }
 }

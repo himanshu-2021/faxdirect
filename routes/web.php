@@ -24,13 +24,17 @@ use App\Http\Controllers\UserController as User;
 // })->middleware(['auth'])->name('dashboard');
 
 //guest route
+Route::get('/',[Home::class,'index'])->name('web.home');
+
 Route::get('login',[User::class,'userLogin'])->name('user.login');
 Route::get('register',[User::class,'userRegister'])->name('user.register');
 Route::post('register-submit',[User::class,'userRegisterPost'])->name('user.register.post');
 Route::get('/test-command',[User::class,'testCommand']);
-
-
-
-Route::get('/',[Home::class,'index'])->name('dashboard');
+//auth route
+Route::get('dashboard',[User::class,'index'])->name('admin.dashboard');
+Route::get('run-command',function(){
+    \Artisan::call('cache:clear');
+    echo 'success';
+});
 
 //require __DIR__.'/auth.php';
