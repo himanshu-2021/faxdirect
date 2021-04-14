@@ -13,6 +13,7 @@
           <div class="account-col text-center">
              <img src="{{asset('admin/images/logo2.png')}}" alt="" class="img-thumbnail">
              <h4 class="h4-style">Log into your account</h4>
+             @include('common.flash_message');
              {{-- <h4 class="h4-style-eight">Himanshu Kushwaha</h4> --}}
              <form class="m-t" role="form" action="">
                 <div class="form-group row">
