@@ -55,10 +55,12 @@ class UserController extends Controller
                 $mysqlUserName = config('database.connections.mysql.username');
                 $mysqlPassword = config('database.connections.mysql.password');
                // $mysqlHostName = config('database.connections.mysql2.host');
-                //$mysqlImportFilename = storage_path("app/public/faxdirect_dummy.sql");
+               //first way to copy data
+                //$mysqlImportFilename = storage_path("app/public/faxdirect_dummy.sql"); //replace daily after work if you change/modify the database structure
                 //$command='mysql -h' .$mysqlHostName .' -u' .$mysqlUserName .' -p' .$mysqlPassword .' ' .$mysqlDatabaseName .' < ' .$mysqlImportFilename;
                 //exec($command." 2>&1",$output , $worked);
-                $copy_db='faxdirect_dummy';
+                // second way to copy data
+                $copy_db='faxdirect_dummy';  //in miner case may be not connected at run time.
                 exec("mysqldump -u $mysqlUserName --password=$mysqlPassword $copy_db | mysql -u $mysqlUserName -p$mysqlPassword $subdomain_db");
 
                 //another way but not testing as working
