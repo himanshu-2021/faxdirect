@@ -4,7 +4,7 @@
 
 
 
-      <a href="{{route('dashboard')}}">
+      <a href="{{route('admin.dashboard')}}">
         <img src="{{asset('admin/images/logo2.png')}}" alt="" class="img-thumbnail"></a>
     </div>
     <div class="menu-toggler sidebar-toggler">
@@ -19,8 +19,24 @@
     </div>
     <!-- END LOGO -->
     <!-- BEGIN TOP NAVIGATION MENU -->
+    @auth
+        <p style="
+        margin: 10px 21px 0px 0px;
+        float: right;
+        font-weight: 700;
+        color: #fff;
+        /* letter-spacing: -.4px; */
+        /* text-align: center; */
+        margin-bottom: 0px;
+        /* margin: 4px 0px !important; */
+    ">{{auth()->user()->name}}</p>
+    @endauth
+
+
     <div class="top-menu">
        <ul class="nav navbar-nav float-right">
+
+
           <!-- BEGIN NOTIFICATION DROPDOWN -->
           <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">

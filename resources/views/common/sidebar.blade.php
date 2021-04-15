@@ -2,7 +2,7 @@
     <nav class="sidebar-nav">
        <ul class="metismenu" id="menu">
 
-           <li><a href="{{route('dashboard')}}"><i class="fa fa-inbox"></i>  <span class="nav-label">Dashboard</span></a></li>
+           <li><a href="{{route('admin.dashboard')}}"><i class="fa fa-inbox"></i>  <span class="nav-label">Dashboard</span></a></li>
           <li>
              <a href="#"><i class="fa fa-phone"></i> <span class="nav-label">Communication</span><span class="fa arrow"></span></a>
              <ul class="nav nav-second-level collapse">
@@ -38,7 +38,7 @@
 
              </ul>
           </li>
-          <li><a href="login.php"><i class="fa fa-fax"></i>  <span class="nav-label">  Logout</span></a></li>
+          <li><a href="{{route('user.logout')}}"><i class="fa fa-fax"></i>  <span class="nav-label">  Logout</span></a></li>
 
 
        </ul>

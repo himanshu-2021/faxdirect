@@ -15,12 +15,13 @@
              <h4 class="h4-style">Log into your account</h4>
              @include('common.flash_message');
              {{-- <h4 class="h4-style-eight">Himanshu Kushwaha</h4> --}}
-             <form class="m-t" role="form" action="">
+             <form class="m-t" role="form" action="{{route('user.login.post')}}" method="POST" enctype="multipart/form-data">
+                 @csrf
                 <div class="form-group row">
-                   <input type="text" class="form-control" placeholder="Username" required="">
+                   <input type="text" class="form-control" placeholder="Username" name="email" value="{{old('email')}}">
                 </div>
                 <div class="form-group row">
-                   <input type="password" class="form-control" placeholder="Passowrd" required="">
+                   <input type="password" class="form-control" placeholder="Passowrd" name="password">
                 </div>
 
                 <div class="text-center">

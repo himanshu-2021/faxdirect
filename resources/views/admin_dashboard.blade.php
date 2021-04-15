@@ -17,9 +17,8 @@
         </div>
     </div>
     <!-- end .page title-->
-
+    @include('common.flash_message')
     <div class="row">
-
         <div class="col-md-6 col-lg-4">
             <div class="card dashboard-bg-one white-text clearfix text-center dashboard-border  boxminheight">
             <div class="card-content clearfix">

@@ -13,7 +13,7 @@
           <li class="aboutd"><a  href="about.php">About</a></li>
           <li class="PrivacyPolicyd"><a  href="PrivacyPolicy.php" class = "PrivacyPolicy"  >Privacy Policy</a></li>
           <li class="TermandConditiond"><a  href="TermandCondition.php">Terms and Conditions</a></li>
-          <li ><a href="{{route('user.login')}}">Login</a></li>
+          <li ><a href="{{route('login')}}">Login</a></li>
 
         </ul>
       </nav>

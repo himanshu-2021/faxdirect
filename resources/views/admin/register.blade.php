@@ -40,7 +40,7 @@
                     <p class=" text-center p-margin-bottom-0px"><small class="small-style">Already have an account?</small></p>
 
                     <div class="text-center">
-                        <a class="btn  btn-secondary  btn-sm" href="{{route('user.login')}}">Log into account</a>
+                        <a class="btn  btn-secondary  btn-sm" href="{{route('login')}}">Log into account</a>
                     </div>
 
                 </form>

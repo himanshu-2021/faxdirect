@@ -26,15 +26,17 @@ use App\Http\Controllers\UserController as User;
 //guest route
 Route::get('/',[Home::class,'index'])->name('web.home');
 
-Route::get('login',[User::class,'userLogin'])->name('user.login');
+Route::get('login',[User::class,'userLogin'])->name('login');
 Route::get('register',[User::class,'userRegister'])->name('user.register');
 Route::post('register-submit',[User::class,'userRegisterPost'])->name('user.register.post');
+Route::post('login-submit',[User::class,'userLoginPost'])->name('user.login.post');
 Route::get('/test-command',[User::class,'testCommand']);
 //auth route
-Route::get('dashboard',[User::class,'index'])->name('admin.dashboard');
+Route::get('dashboard',[User::class,'index'])->name('admin.dashboard')->middleware('auth');
 Route::get('run-command',function(){
     \Artisan::call('cache:clear');
     echo 'success';
 });
+Route::get('logout',[User::class,'logout'])->name('user.logout');
 
 //require __DIR__.'/auth.php';

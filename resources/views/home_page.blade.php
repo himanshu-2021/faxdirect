@@ -27,7 +27,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Faxdirect</span></h2>
           <p class="animate__animated fanimate__adeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-           <a href="{{route('user.login')}}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Login</a>
+           <a href="{{route('login')}}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Login</a>
         </div>
       </div>
 
@@ -36,7 +36,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
           <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-           <a href="{{route('user.login')}}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Login</a>
+           <a href="{{route('login')}}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Login</a>
         </div>
       </div>
 
@@ -45,7 +45,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
           <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="{{route('user.login')}}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Login</a>
+          <a href="{{route('login')}}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Login</a>
         </div>
       </div>
 
@@ -77,10 +77,10 @@
     </svg>
 
   </section><!-- End Hero -->
-
+  @include('common.flash_message');
    <div class="section-title" data-aos="zoom-out" style=" visibility:hidden;">
         <div class="text-center ">
-            <a href="{{route('user.login')}}" class="btn-style">Login</a>
+            <a href="{{route('login')}}" class="btn-style">Login</a>
         </div>
     </div>
 @endsection

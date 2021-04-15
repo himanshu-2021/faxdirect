@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('bussiness_name')->nullable()->unique();
+            $table->string('bussiness_name')->nullable()->comment('use as subdomain');
             $table->string('flag')->default(0)->nullable()->comment('take for future');
             $table->integer('status')->default(1)->nullable()->comment('1-active,0-inactive');
             $table->string('login_type')->default('web')->nullable()->comment('fb,google,web');
@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('referance_id')->nullable()->comment('for subdomain case when makes user');
             $table->string('subdomain')->nullable()->comment('for subdomain case');
             $table->string('database_name')->nullable()->comment('for subdomain case');
-            $table->string('role')->nullable()->comment('SuperAdmin,Admin,User');
+            $table->integer('role')->nullable()->comment('SuperAdmin,Admin,User');
             $table->string('plan_id')->default(1)->comment('for subscription plan');
             $table->string('plan_expired')->nullable()->comment('for subscription');
             $table->integer('is_deleted')->default(0)->comment('0-not deleted,1-deleted');
